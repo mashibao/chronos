@@ -267,7 +267,10 @@ func (lunar *Lunar) Date() string {
 	result += getChineseDay(lunar.day)
 	return result
 }
-
+func (lunar *Lunar) DateTime() string {
+	result := fmt.Sprintf("%d.%d",lunar.month,lunar.day)
+	return result
+}
 const yearMin = 1900
 const yearMax = 2100
 
